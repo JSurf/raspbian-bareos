@@ -13,9 +13,9 @@ printf "deb-src $URL /\n" > /etc/apt/sources.list.d/bareos-src.list
  
 # add package key 
 wget -q $URL/Release.key -O- | apt-key add - 
-#mkdir -p /var/src/debian/; cd /var/src/debian 
- 
+#mkdir -p /var/src/debian/; cd /var/src/debian  
+ls -l
 apt-get update
 apt-get source bareos
-ls -l
-#apt-get install bareos bareos-database-$DATABASE
+apt-get build-dep bareos
+debuild -b -uc -us
