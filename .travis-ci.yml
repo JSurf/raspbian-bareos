@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+   - docker
+
+install:
+   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
+   
+script:
+   - docker  run -v ./build.sh:/tmp/build.sh --rm $DOCKER_IMAGE_NAME /tmp/build.sh
+
+env:
+   - DOCKER_IMAGE_NAME=resin/rpi-raspbian:jessie
