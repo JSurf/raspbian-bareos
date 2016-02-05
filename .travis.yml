@@ -8,7 +8,7 @@ install:
    
 script:
    - chmod 755 ./build.sh
-   - docker run -v ./build.sh:/tmp/build.sh --rm $DOCKER_IMAGE_NAME /tmp/build.sh
+   - docker run --rm -v ${PWD}/build.sh:/tmp/build.sh $DOCKER_IMAGE_NAME /tmp/build.sh
 
 env:
    - DOCKER_IMAGE_NAME=resin/rpi-raspbian:jessie
