@@ -20,7 +20,7 @@ apt-get update
 
 apt-get source bareos
 #apt-get build-dep bareos
-apt-get install build-essential:native acl-dev autotools-dev bc chrpath debhelper git-core libacl1-dev libcap-dev libjansson-dev liblzo2-dev libqt4-dev libreadline-dev libssl-dev libwrap0-dev libx11-dev libsqlite3-dev libmysqlclient-dev libpq-dev logrotate lsb-release mtx ncurses-dev pkg-config po-debconf python-dev zlib1g-dev devscripts
+apt-get install acl-dev autotools-dev bc chrpath git-core libacl1-dev libcap-dev libjansson-dev liblzo2-dev libqt4-dev libreadline-dev libssl-dev libwrap0-dev libx11-dev libsqlite3-dev libmysqlclient-dev libpq-dev logrotate lsb-release mtx ncurses-dev pkg-config po-debconf python-dev zlib1g-dev
 
 cd bareos*
 debuild -b -uc -us

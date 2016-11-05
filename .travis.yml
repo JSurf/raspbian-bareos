@@ -11,4 +11,4 @@ script:
    - docker run --rm -v ${PWD}/build.sh:/tmp/build.sh $DOCKER_IMAGE_NAME /tmp/build.sh
 
 env:
-   - DOCKER_IMAGE_NAME=resin/rpi-raspbian:jessie
+   - DOCKER_IMAGE_NAME=jsurf/rpi-raspbian-build-essentials:latest
