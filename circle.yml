@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker run --rm --privileged multiarch/qemu-user-static:register --reset
+    - chmod 755 ./build.sh
+    - echo ${PWD} && ls -l
+    - docker run --rm -v ${PWD}/build.sh:/tmp/build.sh jsurf/rpi-raspbian-build-essentials:latest /tmp/build.sh
